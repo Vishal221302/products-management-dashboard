@@ -158,7 +158,7 @@ const Header = ({ toggleSidebar, isMobile, isSidebarOpen, isSidebarCollapsed }) 
                   <User className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" />
                   <span>My Profile</span>
                 </Link>
-                <Link to="" className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-150 group hover:translate-x-1">
+                <Link to="/dashboard/message" className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-150 group hover:translate-x-1">
                   <Mail className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" />
                   <span>Messages</span>
                   <span className="ml-auto px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full animate-pulse">

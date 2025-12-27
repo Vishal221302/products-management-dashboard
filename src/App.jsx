@@ -15,6 +15,7 @@ import Roadmap from './pages/Roadmap';
 import Settings from './pages/Setting';
 import HelpSupport from './pages/Help';
 import UserProfile from './pages/UserProfiles';
+import ChatSystem from './pages/ChatSystem';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
             <Route path="setting" element={<Settings />} />
             <Route path="helpsupport" element={<HelpSupport />} />
             <Route path="profile" element={<UserProfile />} />
+            <Route path="message" element={<ChatSystem />} />
           </Route>
 
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
