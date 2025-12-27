@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import NotificationDropdown from './NotificationDropdown';
+import { Link } from 'react-router-dom';
 
 const Header = ({ toggleSidebar, isMobile, isSidebarOpen, isSidebarCollapsed }) => {
   const { user, logout } = useAuth();
@@ -153,21 +154,21 @@ const Header = ({ toggleSidebar, isMobile, isSidebarOpen, isSidebarCollapsed }) 
 
               {/* Menu Items */}
               <div className="p-2">
-                <a href="/dashboard/profile" className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-150 group hover:translate-x-1">
+                <Link to="/dashboard/profile"  className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-150 group hover:translate-x-1">
                   <User className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" />
                   <span>My Profile</span>
-                </a>
-                <a href="#" className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-150 group hover:translate-x-1">
+                </Link>
+                <Link to="" className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-150 group hover:translate-x-1">
                   <Mail className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" />
                   <span>Messages</span>
                   <span className="ml-auto px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full animate-pulse">
                     3
                   </span>
-                </a>
-                <a href="/dashboard/setting" className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-150 group hover:translate-x-1">
+                </Link>
+                < Link to="/dashboard/setting" className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-150 group hover:translate-x-1">
                   <Settings className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" />
                   <span>Account Settings</span>
-                </a>
+                </Link>
               </div>
 
               {/* Divider */}
@@ -175,10 +176,10 @@ const Header = ({ toggleSidebar, isMobile, isSidebarOpen, isSidebarCollapsed }) 
 
               {/* Help & Logout */}
               <div className="p-2">
-                <a href="/dashboard/helpsupport" className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-150 group hover:translate-x-1">
+                <Link to="/dashboard/helpsupport" className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-150 group hover:translate-x-1">
                   <HelpCircle className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" />
                   <span>Help & Support</span>
-                </a>
+                </Link>
                 <button
                   onClick={logout}
                   className="w-full flex items-center space-x-3 px-4 py-3 text-red-600 hover:bg-red-50 rounded-lg transition-all duration-150 group hover:translate-x-1"
